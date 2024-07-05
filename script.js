@@ -24,6 +24,7 @@ let progress = document.getElementById("progress");
 let song = document.getElementById("song");
 
 song.onloadedmetadata = function () {
+  song.play();
   progress.max = song.duration;
   progress.value = song.currentTime;
 };
@@ -37,7 +38,7 @@ progress.onchange = function () {
   song.currentTime = progress.value;
 };
 
-let disc = document.getElementsByClassName("img-area");
+let disc = document.getElementById("disc");
 
 disc.onclick = function () {
   song.play();
