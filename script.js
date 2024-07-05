@@ -36,3 +36,9 @@ progress.onchange = function () {
   song.play();
   song.currentTime = progress.value;
 };
+
+let disc = document.getElementsByClassName("img-area");
+
+disc.onclick = function () {
+  song.play();
+};
